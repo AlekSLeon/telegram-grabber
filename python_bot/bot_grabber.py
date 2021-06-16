@@ -6,10 +6,12 @@ base_dir = os.path.abspath(os.path.join(os.path.dirname('bot_grabber.py'), '..')
 sys.path.append(base_dir)
 from sql.sql import SQL
 
-api_id = os.getenv('API_ID')
-api_hash = os.getenv('API_HASH')
+app = Client(
+    "Name_of_App",
+    api_id=YOUR_APP_ID,
+    api_hash="YOUR_APP_HASH"
+)
 
-app = Client('bot_python', api_id, api_hash)
 bd = SQL('../bd.db')
 
 
